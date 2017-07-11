@@ -1,7 +1,213 @@
-
-
-/* =========================== ШАПКА ==========================*/
-
-header .descript h4 {
-	font-family: 'Lato', sans-serif;
+/*============    ШРИФТЫ    ===========*/
+.bold {
+  font-family: 'Roboto';
+  font-size: 20px;
 }
+.med {
+  font-family: 'Lato';
+  font-size: 15px;
+}
+.light {
+  font-family: 'Open+Sans';
+}
+/*============    BAZA    ===========*/
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+.section_header h2 {
+  text-transform: uppercase;
+  color: #666666;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+/*============    ШАПКА    ===========*/
+header {
+  padding-bottom: 20px;
+  padding-top: 25px;
+  color: #666666;
+}
+header .descript h4 {
+  font-family: 'Lato';
+  font-size: 15px;
+  text-transform: uppercase;
+}
+header .descript h5 {
+  font-family: 'Open+Sans';
+  font-size: 15px;
+}
+header .phone_number {
+  text-align: right;
+}
+header .phone_number h3 {
+  margin-top: 3px;
+  display: inline-block;
+}
+header .phone_number a {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #666666;
+}
+header .phone_number a:hover {
+  text-decoration: none;
+}
+header .phone_number a:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+}
+header .phone_number p {
+  font-family: 'Open+Sans';
+}
+/*============    NAV    ===========*/
+nav {
+  background-color: #fafdfa;
+}
+nav ul.list-inline a {
+  font-family: 'Open+Sans';
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 20px 10px;
+  color: #666666;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+nav ul.list-inline a:hover {
+  text-decoration: none;
+  background-color: #67cc67;
+  color: #fff;
+}
+nav ul.list-inline {
+  margin-bottom: 0;
+}
+/*============    Экран    ===========*/
+section#main {
+  background: url(../img/main_background.jpg) no-repeat center center;
+  background-size: cover;
+}
+section#main .main_header h1 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-size: 30px;
+  margin-top: 100px;
+  margin-bottom: 90px;
+  text-transform: uppercase;
+  color: #fff;
+}
+section#main .main_header h1 span {
+  background-color: #67cc67;
+  padding: 5px;
+}
+section#main h3 {
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-size: 25px;
+  color: #fff;
+}
+section#main h3 span {
+  color: #ff9933;
+}
+section#main .main_buttons {
+  margin-top: 7px;
+  margin-bottom: 100px;
+}
+section#main .main_buttons button#get_measurer {
+  border: none;
+  background-color: #ff9933;
+  padding: 17px 35px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+section#main .main_buttons button#get_measurer:hover {
+  background-color: #d67513;
+}
+section#main .main_buttons button#get_types {
+  border: none;
+  background-color: transparent;
+  padding: 15px 33px;
+  color: #ff9933;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 20px;
+  border: 2px solid #ff9933;
+  margin-left: 20px;
+}
+section#main .main_buttons button#get_types:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*============    Виды жалюзи   ===========*/
+section#types {
+  color: #666666;
+  padding-top: 50px;
+}
+section#types .section_header {
+  margin-bottom: 50px;
+}
+section#types h4 {
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-size: 15px;
+}
+section#types button.more {
+  boreder: none;
+  color: #66cc66;
+  border: 2px solid #66cc66;
+  padding: 10px 23px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-size: 13px;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+section#types button.more:hover {
+  background-color: #66cc66;
+  color: #fff;
+}
+section#types button.offer {
+  boreder: none;
+  color: #fff;
+  border: 2px solid #66cc66;
+  padding: 10px 23px;
+  background-color: #66cc66;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-size: 13px;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+section#types button.offer:hover {
+  background-color: transparent;
+  color: #66cc66;
+}
+section#types .card {
+  border: 2px solid transparent;
+  padding: 5px;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+section#types .card:hover {
+  border: 2px solid #b2e5b2;
+  background: #fafdfa;
+}
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ШРИФТЫ    ===========*/
+/*============    ПОДВАЛ    ===========*/
+/*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
+/*============    	АДАПТИВ    ===========*/

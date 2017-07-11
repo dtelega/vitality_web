@@ -5,19 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Заголовок </title>
-
-    <!-- LESS -->
-    <link rel="stylesheet/less" type="text/css" href="css/style.less" /> 
-    <script src="css/less.js" type="text/javascript"></script>
-
+    <title>Производство, продажа и установка жалюзи </title>
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans|Roboto:500" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/style.css">  -->
+    <link rel="stylesheet" href="css/style.css">  
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,12 +32,15 @@
           <h4>Производство, продажа и установка жалюзи</h4>
           <h5>в Казани</h5>
         </div>
-        <div class="col-sm-3 phone_number"></div>
-          <h3><a href="tel:+380999999999">+380 9999999</a></h3>
+        <div class="col-sm-3 phone_number">
+          <i class="fa fa-mobile" style="display:inline-block; height:20px" aria-hidden="true"></i>
+          <h3 ><a href="tel:+380999999999">+380 9999999</a></h3>
           <p>Режим работы с 9 <sup>00</sup> до 18 <sup>00</sup></p>
+        </div>
       </div>
     </div>
   </header>
+
   <nav>
     <div class="container">
       <div class="row">
@@ -72,15 +70,15 @@
 
   <section id="main">
     <div class="container">
-      <div class="row">
-        <h1>Установим жалюзи в вашей квартире <br>за 2 часа с полной гарантией <br>и бесплатной доставкой</h1>
+      <div class="row main_header">
+        <h1><span>Установим жалюзи в вашей квартире </span><br><span>за 2 часа с полной гарантией </span><br><span>и бесплатной доставкой</span></h1>
       </div>
       <div class="row">
         <h3>Закажите выезд замерщика на дом. <span>Это бесплатно!</span></h3>
       </div>
-      <div class="row">
-        <button>Вызвать замерщика</button>
-        <button>Выбрать жалюзи</button>
+      <div class="row main_buttons">
+        <button data-toggle=modal href="#" id="get_measurer">Вызвать замерщика</button>
+        <a href="#types"><button id="get_types">Выбрать жалюзи</button></a>
       </div>
     </div>
   </section>
@@ -95,38 +93,38 @@
       <div class="row text-center">
         <div class="col-md-3">
           <div class="card">
-            <img src="img/types-1.png" alt="горизонтальные жалюзи" class="img-responsive center-block">
+            <img src="img/1.jpg" alt="горизонтальные жалюзи" class="img-responsive center-block">
             <h4>Горизонтальные жалюзи</h4>
             <br>
-            <button data-toggle="modal" href="#">Подробнее</button>
-            <button data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#">Заказать</button>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <img src="img/types-2.png" alt="Вертикальные жалюзи" class="img-responsive center-block">
+            <img src="img/1.jpg" alt="Вертикальные жалюзи" class="img-responsive center-block">
             <h4>Вертикальные жалюзи</h4>
             <br>
-            <button data-toggle="modal" href="#">Подробнее</button>
-            <button data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#">Заказать</button>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <img src="img/types-3.png" alt="Рулонные жалюзи" class="img-responsive center-block">
+            <img src="img/1.jpg" alt="Рулонные жалюзи" class="img-responsive center-block">
             <h4>Рулонные жалюзи</h4>
             <br>
-            <button data-toggle="modal" href="#">Подробнее</button>
-            <button data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#">Заказать</button>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <img src="img/types-4.png" alt="Жалюзи плиссе" class="img-responsive center-block">
+            <img src="img/1.jpg" alt="Жалюзи плиссе" class="img-responsive center-block">
             <h4>Жалюзи плиссе</h4>
             <br>
-            <button data-toggle="modal" href="#">Подробнее</button>
-            <button data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#">Заказать</button>
           </div>
         </div>
       </div>
