@@ -28,7 +28,11 @@ a:active {
 	text-transform: uppercase;
 	color: #666666;
 	.bold;
-} 
+}
+
+button:focus {
+	outline: none;
+}
 
 /*============    ШАПКА    ===========*/
 
@@ -119,9 +123,9 @@ section#main {
 		text-transform: uppercase;
 		.bold;
 		font-size: 25px;
-		color: #fff;
+		color: #666666;
 		span {
-			color: #ff9933;
+			background: rgba(255, 255, 255, 0.5);
 		}
 	}
 	.main_buttons {
@@ -135,6 +139,9 @@ section#main {
 			font-size: 20px;
 			text-transform: uppercase;
 			.bold;
+				-moz-transition: all 0.2s 0.02s ease;
+				-o-transition: all 0.2s 0.02s ease;
+				-webkit-transition: all 0.2s 0.02s ease;
 			&:hover {
 				background-color: #d67513;
 			}
@@ -149,6 +156,9 @@ section#main {
 			font-size: 20px;
 			border: 2px solid #ff9933;
 			margin-left: 20px;
+				-moz-transition: all 0.2s 0.02s ease;
+				-o-transition: all 0.2s 0.02s ease;
+				-webkit-transition: all 0.2s 0.02s ease;
 			&:hover {
 				background-color: rgba(255, 255, 255, 0.5);
 				
@@ -169,16 +179,17 @@ section#types {
 		margin-top: 25px;
 		text-transform: uppercase;
 		.med;
+		font-size: 13px;
 	}
 	button.more {
 		boreder: none;
 		color: #66cc66;
 		border: 2px solid #66cc66;
-		padding: 10px 23px;
+		padding: 12px 30px;
 		background-color: transparent;
 		text-transform: uppercase;
 		.bold;
-		font-size: 13px;
+		font-size: 10px;
 			-moz-transition: all 0.2s 0.02s ease;
 			-o-transition: all 0.2s 0.02s ease;
 			-webkit-transition: all 0.2s 0.02s ease;
@@ -191,11 +202,11 @@ section#types {
 		boreder: none;
 		color: #fff;
 		border: 2px solid #66cc66;
-		padding: 10px 23px;
+		padding: 12px 30px;
 		background-color: #66cc66;
 		text-transform: uppercase;
 		.bold;
-		font-size: 13px;
+		font-size: 10px;
 			-moz-transition: all 0.2s 0.02s ease;
 			-o-transition: all 0.2s 0.02s ease;
 			-webkit-transition: all 0.2s 0.02s ease;
@@ -206,7 +217,7 @@ section#types {
 	}
 	.card {
 		border: 2px solid transparent;
-		padding: 5px;
+		padding: 3px;
 			-moz-transition: all 0.2s 0.02s ease;
 			-o-transition: all 0.2s 0.02s ease;
 			-webkit-transition: all 0.2s 0.02s ease;
@@ -218,16 +229,361 @@ section#types {
 }
 
 
-/*============    ШРИФТЫ    ===========*/
+/*============    help    ===========*/
 
-/*============    ШРИФТЫ    ===========*/
+section#help {
+	padding-top: 60px;
+	padding-bottom: 50px;
+	h3 {
+		color: #ff9933;
+		text-transform: uppercase;
+		.bold;
+	}
+	p {
+		color: #666666;
+		.light;
+		font-size: 13px;
+	}
+	.help_img {
+		margin-top: 25px;
+	}
+	button#free_consult {
+		border: none;
+		background-color: transparent;
+		color: #ff9933;
+		border: 2px solid #ff9933;
+		padding: 15px 35px;
+		.bold;
+		text-transform: uppercase;
+		&:hover {
+			background-color: #ff9933;
+			color: #fff;
+		}
+	}
+}
 
-/*============    ШРИФТЫ    ===========*/
+/*============    АКЦИЯ    ===========*/
 
-/*============    ШРИФТЫ    ===========*/
+section#offer {
+	padding-top: 70px;
+	h4 {
+		text-transform: uppercase;
+		color: #ff9933;
+		.bold;
+	}
+	h3 {
+		text-transform: uppercase;
+		color: #ff9933;
+		.bold;
+	}
+	p {
+		.light;
+		color: #666666;
+		font-size: 22px;
+	}
+	input[name="name"] {
+		background: url(../img/user.jpg) no-repeat center left 7px;
+		background-size: 15px;
+		padding: 21px;
+		padding-left: 30px; 
+		border-radius: 0;
+		border: 1px solid #cccccc;
+		.light;
+		opacity: 0.6;
+		&:hover, &:focus {
+			opacity: 1;
+		}
+	}
+	input[name="phone"] {
+		background: url(../img/phone.png) no-repeat center left 7px;
+		background-size: 13px;
+		padding: 21px;
+		padding-left: 30px; 
+		border-radius: 0;
+		border: 1px solid #cccccc;
+		.light;
+		opacity: 0.6;
+		&:hover, &:focus {
+			opacity: 1;
+		}
+	}
+	button[type="submit"] {
+		background-color: #ff9933;
+		color: #fff;
+		border: 2px solid #ff9933;
+		padding: 10px 25px;
+	}
 
-/*============    ШРИФТЫ    ===========*/
+}
 
+/*============    FEEDBACK   ===========*/
+
+section#feedback {
+	.section_header {
+		margin-bottom: 50px;
+	}
+	.item {
+		background-color: #f8f8f8;
+		padding: 20px;
+		h5 {
+			margin-top: 20px;
+			.med;
+			color: #666666;
+			font-size: 20px;
+		}
+		a {
+			.med;
+			font-size: 18px;
+		}
+		p {
+			margin-top: 30px;
+		}
+	}
+	.carousel-indicators {
+		bottom: -50px;
+		li {
+			border: 1px solid #66cc66;
+		}
+	}
+	.carousel-indicators .active {
+		background-color: #66cc66;
+	}
+}
+
+/*============    FOOTER    ===========*/
+
+footer#contacts {
+	margin-top: 50px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	background-color: #666666;
+	color: #fff;
+	.foot_icon {
+		display: inline-block;
+	}
+	p#kazan, p#number {
+		display: inline-block;
+		font-size: 20px;
+		.light;
+		margin-top: 0;
+	}
+	h2 {
+		.bold;
+		margin-left: -15px;
+		text-transform: uppercase;
+	}
+	address {
+		p#address {
+			text-transform: uppercase;
+			color: 
+			.light;
+			&:before {
+				content: '';
+			}
+		}
+	}
+	p#phone_footer {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		.light;
+		&:before {
+			content: '';
+		}
+	}
+	div a i {
+		padding: 10px;
+		color: #666666;
+		background-color: #fff;
+		border-radius: 50%;
+			-moz-transition: all 0.2s 0.02s ease;
+			-o-transition: all 0.2s 0.02s ease;
+			-webkit-transition: all 0.2s 0.02s ease;
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+			background-color: transparent; 
+		}
+	}
+	button#get_answer {
+		text-transform: uppercase;
+		margin-left: 10px;
+		background-color: transparent;
+		padding: 7px 35px;
+		color: #fff;
+		border: 2px solid #fff;
+		.bold;
+			-moz-transition: all 0.2s 0.02s ease;
+			-o-transition: all 0.2s 0.02s ease;
+			-webkit-transition: all 0.2s 0.02s ease;
+		&:hover {
+			background-color: #fff;
+			color: #666666;
+		}
+	}
+	.details_row {
+		margin-top: 10px;
+	}
+	.details {
+		h5 {
+			.bold;
+			font-size: 20px;
+		}
+		p {
+			text-transform: uppercase;
+			.light;
+		}
+	}
+	.policy {
+		text-align: center;
+		margin-top: 20px;
+		a {
+			color: #fff;
+			border-bottom: 1px dashed #fff;
+		}
+	}
+	.dtelega {
+		text-align: right;
+		h4 {
+			.bold;
+			text-transform: uppercase;
+		}
+		a {
+			color: #f8f8f8;
+			.bold;
+			font-size: 18px;
+			&:hover {
+				color: #66cc66;
+			}
+		}
+	}
+}
+
+
+/*============    всплывающие окна    ===========*/
+
+.modal-dialog {
+	margin-top: 10%;
+}
+
+div#more_horizontal {
+	.modal-dialog {
+		width: 60%;
+	}
+}
+div#more_vertical {
+	.modal-dialog {
+		width: 60%;
+	}
+}
+div#more_roll {
+	.modal-dialog {
+		width: 60%;
+	}
+}
+div#more_plisse {
+	.modal-dialog {
+		width: 60%;
+	}
+}
+.header_modal {
+	text-transform: uppercase;
+	color: #666666;
+	h3 {
+		font-size: 18px;
+	}
+}
+
+.modal-header {
+	margin-top: -50px;
+	border-bottom: none;
+	.close {
+		text-shadow: none;
+		color: #fff;
+		opacity: 0.9;
+		margin-right: -30px;
+	}
+}
+.modal-content {
+	border-radius: 0;
+}
+
+.modal-body {
+	p {
+		.light;
+		font-size: 18px;
+	}
+}
+
+input[name="name"] {
+	margin-top: 15px;
+	background: url(../img/user.jpg) no-repeat center left 7px;
+	background-size: 15px;
+	padding: 21px;
+	padding-left: 30px; 
+	border-radius: 0;
+	border: 1px solid #cccccc;
+	.light;
+	opacity: 0.6;
+	&:hover, &:focus {
+		opacity: 1;
+	}
+}
+input[name="phone"] {
+	margin-top: 15px;
+	background: url(../img/phone.png) no-repeat center left 7px;
+	background-size: 13px;
+	padding: 21px;
+	padding-left: 30px; 
+	border-radius: 0;
+	border: 1px solid #cccccc;
+	.light;
+	opacity: 0.6;
+	&:hover, &:focus {
+		opacity: 1;
+	}
+}
+
+textarea {
+	width: 100%;
+	margin-top: 15px;
+	background-size: 13px;
+	padding: 21px;
+	padding-left: 30px; 
+	border-radius: 0;
+	border: 1px solid #cccccc;
+	.light;
+	opacity: 0.6;
+	&:hover, &:focus {
+		opacity: 1;
+	}
+}
+
+button[type="submit"] {
+	margin-top: 15px;
+	background-color: #ff9933;
+	color: #fff;
+	border: 2px solid #ff9933;
+	padding: 10px 34px;
+	width: 100%;
+	&:hover {
+		background-color: #fc8b1a;
+	}
+}
+
+.header_modal_info {
+	h4 {
+		text-transform: uppercase;
+		color: #666666;
+		.bold;
+		margin-left: 20px;
+	}
+}
+
+.price {
+	.bold;
+	color: #ff9933;
+	font-size: 22px;
+}
 /*============    ШРИФТЫ    ===========*/
 
 /*============    ПОДВАЛ    ===========*/

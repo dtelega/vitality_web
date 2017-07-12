@@ -23,6 +23,9 @@ a:active {
   font-family: 'Roboto';
   font-size: 20px;
 }
+button:focus {
+  outline: none;
+}
 /*============    ШАПКА    ===========*/
 header {
   padding-bottom: 20px;
@@ -106,10 +109,10 @@ section#main h3 {
   font-family: 'Roboto';
   font-size: 20px;
   font-size: 25px;
-  color: #fff;
+  color: #666666;
 }
 section#main h3 span {
-  color: #ff9933;
+  background: rgba(255, 255, 255, 0.5);
 }
 section#main .main_buttons {
   margin-top: 7px;
@@ -123,6 +126,9 @@ section#main .main_buttons button#get_measurer {
   text-transform: uppercase;
   font-family: 'Roboto';
   font-size: 20px;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
 }
 section#main .main_buttons button#get_measurer:hover {
   background-color: #d67513;
@@ -137,6 +143,9 @@ section#main .main_buttons button#get_types {
   font-size: 20px;
   border: 2px solid #ff9933;
   margin-left: 20px;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
 }
 section#main .main_buttons button#get_types:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -154,17 +163,18 @@ section#types h4 {
   text-transform: uppercase;
   font-family: 'Lato';
   font-size: 15px;
+  font-size: 13px;
 }
 section#types button.more {
   boreder: none;
   color: #66cc66;
   border: 2px solid #66cc66;
-  padding: 10px 23px;
+  padding: 12px 30px;
   background-color: transparent;
   text-transform: uppercase;
   font-family: 'Roboto';
   font-size: 20px;
-  font-size: 13px;
+  font-size: 10px;
   -moz-transition: all 0.2s 0.02s ease;
   -o-transition: all 0.2s 0.02s ease;
   -webkit-transition: all 0.2s 0.02s ease;
@@ -177,12 +187,12 @@ section#types button.offer {
   boreder: none;
   color: #fff;
   border: 2px solid #66cc66;
-  padding: 10px 23px;
+  padding: 12px 30px;
   background-color: #66cc66;
   text-transform: uppercase;
   font-family: 'Roboto';
   font-size: 20px;
-  font-size: 13px;
+  font-size: 10px;
   -moz-transition: all 0.2s 0.02s ease;
   -o-transition: all 0.2s 0.02s ease;
   -webkit-transition: all 0.2s 0.02s ease;
@@ -193,7 +203,7 @@ section#types button.offer:hover {
 }
 section#types .card {
   border: 2px solid transparent;
-  padding: 5px;
+  padding: 3px;
   -moz-transition: all 0.2s 0.02s ease;
   -o-transition: all 0.2s 0.02s ease;
   -webkit-transition: all 0.2s 0.02s ease;
@@ -202,11 +212,341 @@ section#types .card:hover {
   border: 2px solid #b2e5b2;
   background: #fafdfa;
 }
-/*============    ШРИФТЫ    ===========*/
-/*============    ШРИФТЫ    ===========*/
-/*============    ШРИФТЫ    ===========*/
-/*============    ШРИФТЫ    ===========*/
-/*============    ШРИФТЫ    ===========*/
+/*============    help    ===========*/
+section#help {
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+section#help h3 {
+  color: #ff9933;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+section#help p {
+  color: #666666;
+  font-family: 'Open+Sans';
+  font-size: 13px;
+}
+section#help .help_img {
+  margin-top: 25px;
+}
+section#help button#free_consult {
+  border: none;
+  background-color: transparent;
+  color: #ff9933;
+  border: 2px solid #ff9933;
+  padding: 15px 35px;
+  font-family: 'Roboto';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+section#help button#free_consult:hover {
+  background-color: #ff9933;
+  color: #fff;
+}
+/*============    АКЦИЯ    ===========*/
+section#offer {
+  padding-top: 70px;
+}
+section#offer h4 {
+  text-transform: uppercase;
+  color: #ff9933;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+section#offer h3 {
+  text-transform: uppercase;
+  color: #ff9933;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+section#offer p {
+  font-family: 'Open+Sans';
+  color: #666666;
+  font-size: 22px;
+}
+section#offer input[name="name"] {
+  background: url(../img/user.jpg) no-repeat center left 7px;
+  background-size: 15px;
+  padding: 21px;
+  padding-left: 30px;
+  border-radius: 0;
+  border: 1px solid #cccccc;
+  font-family: 'Open+Sans';
+  opacity: 0.6;
+}
+section#offer input[name="name"]:hover,
+section#offer input[name="name"]:focus {
+  opacity: 1;
+}
+section#offer input[name="phone"] {
+  background: url(../img/phone.png) no-repeat center left 7px;
+  background-size: 13px;
+  padding: 21px;
+  padding-left: 30px;
+  border-radius: 0;
+  border: 1px solid #cccccc;
+  font-family: 'Open+Sans';
+  opacity: 0.6;
+}
+section#offer input[name="phone"]:hover,
+section#offer input[name="phone"]:focus {
+  opacity: 1;
+}
+section#offer button[type="submit"] {
+  background-color: #ff9933;
+  color: #fff;
+  border: 2px solid #ff9933;
+  padding: 10px 25px;
+}
+/*============    FEEDBACK   ===========*/
+section#feedback .section_header {
+  margin-bottom: 50px;
+}
+section#feedback .item {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+section#feedback .item h5 {
+  margin-top: 20px;
+  font-family: 'Lato';
+  font-size: 15px;
+  color: #666666;
+  font-size: 20px;
+}
+section#feedback .item a {
+  font-family: 'Lato';
+  font-size: 15px;
+  font-size: 18px;
+}
+section#feedback .item p {
+  margin-top: 30px;
+}
+section#feedback .carousel-indicators {
+  bottom: -50px;
+}
+section#feedback .carousel-indicators li {
+  border: 1px solid #66cc66;
+}
+section#feedback .carousel-indicators .active {
+  background-color: #66cc66;
+}
+/*============    FOOTER    ===========*/
+footer#contacts {
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  background-color: #666666;
+  color: #fff;
+}
+footer#contacts .foot_icon {
+  display: inline-block;
+}
+footer#contacts p#kazan,
+footer#contacts p#number {
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Open+Sans';
+  margin-top: 0;
+}
+footer#contacts h2 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin-left: -15px;
+  text-transform: uppercase;
+}
+footer#contacts address p#address {
+  text-transform: uppercase;
+  color: .light;
+}
+footer#contacts address p#address:before {
+  content: '';
+}
+footer#contacts p#phone_footer {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: 'Open+Sans';
+}
+footer#contacts p#phone_footer:before {
+  content: '';
+}
+footer#contacts div a i {
+  padding: 10px;
+  color: #666666;
+  background-color: #fff;
+  border-radius: 50%;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+footer#contacts div a i:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+}
+footer#contacts button#get_answer {
+  text-transform: uppercase;
+  margin-left: 10px;
+  background-color: transparent;
+  padding: 7px 35px;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: 'Roboto';
+  font-size: 20px;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+footer#contacts button#get_answer:hover {
+  background-color: #fff;
+  color: #666666;
+}
+footer#contacts .details_row {
+  margin-top: 10px;
+}
+footer#contacts .details h5 {
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+footer#contacts .details p {
+  text-transform: uppercase;
+  font-family: 'Open+Sans';
+}
+footer#contacts .policy {
+  text-align: center;
+  margin-top: 20px;
+}
+footer#contacts .policy a {
+  color: #fff;
+  border-bottom: 1px dashed #fff;
+}
+footer#contacts .dtelega {
+  text-align: right;
+}
+footer#contacts .dtelega h4 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+footer#contacts .dtelega a {
+  color: #f8f8f8;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-size: 18px;
+}
+footer#contacts .dtelega a:hover {
+  color: #66cc66;
+}
+/*============    всплывающие окна    ===========*/
+.modal-dialog {
+  margin-top: 10%;
+}
+div#more_horizontal .modal-dialog {
+  width: 60%;
+}
+div#more_vertical .modal-dialog {
+  width: 60%;
+}
+div#more_roll .modal-dialog {
+  width: 60%;
+}
+div#more_plisse .modal-dialog {
+  width: 60%;
+}
+.header_modal {
+  text-transform: uppercase;
+  color: #666666;
+}
+.header_modal h3 {
+  font-size: 18px;
+}
+.modal-header {
+  margin-top: -50px;
+  border-bottom: none;
+}
+.modal-header .close {
+  text-shadow: none;
+  color: #fff;
+  opacity: 0.9;
+  margin-right: -30px;
+}
+.modal-content {
+  border-radius: 0;
+}
+.modal-body p {
+  font-family: 'Open+Sans';
+  font-size: 18px;
+}
+input[name="name"] {
+  margin-top: 15px;
+  background: url(../img/user.jpg) no-repeat center left 7px;
+  background-size: 15px;
+  padding: 21px;
+  padding-left: 30px;
+  border-radius: 0;
+  border: 1px solid #cccccc;
+  font-family: 'Open+Sans';
+  opacity: 0.6;
+}
+input[name="name"]:hover,
+input[name="name"]:focus {
+  opacity: 1;
+}
+input[name="phone"] {
+  margin-top: 15px;
+  background: url(../img/phone.png) no-repeat center left 7px;
+  background-size: 13px;
+  padding: 21px;
+  padding-left: 30px;
+  border-radius: 0;
+  border: 1px solid #cccccc;
+  font-family: 'Open+Sans';
+  opacity: 0.6;
+}
+input[name="phone"]:hover,
+input[name="phone"]:focus {
+  opacity: 1;
+}
+textarea {
+  width: 100%;
+  margin-top: 15px;
+  background-size: 13px;
+  padding: 21px;
+  padding-left: 30px;
+  border-radius: 0;
+  border: 1px solid #cccccc;
+  font-family: 'Open+Sans';
+  opacity: 0.6;
+}
+textarea:hover,
+textarea:focus {
+  opacity: 1;
+}
+button[type="submit"] {
+  margin-top: 15px;
+  background-color: #ff9933;
+  color: #fff;
+  border: 2px solid #ff9933;
+  padding: 10px 34px;
+  width: 100%;
+}
+button[type="submit"]:hover {
+  background-color: #fc8b1a;
+}
+.header_modal_info h4 {
+  text-transform: uppercase;
+  color: #666666;
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin-left: 20px;
+}
+.price {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #ff9933;
+  font-size: 22px;
+}
 /*============    ШРИФТЫ    ===========*/
 /*============    ПОДВАЛ    ===========*/
 /*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/

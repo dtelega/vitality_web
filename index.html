@@ -74,10 +74,10 @@
         <h1><span>Установим жалюзи в вашей квартире </span><br><span>за 2 часа с полной гарантией </span><br><span>и бесплатной доставкой</span></h1>
       </div>
       <div class="row">
-        <h3>Закажите выезд замерщика на дом. <span>Это бесплатно!</span></h3>
+        <h3><span>Закажите выезд замерщика на дом. <span style="color:#ff9933">Это бесплатно!</span></span></h3>
       </div>
       <div class="row main_buttons">
-        <button data-toggle=modal href="#" id="get_measurer">Вызвать замерщика</button>
+        <button data-toggle=modal href="#get_measurer_modal" id="get_measurer">Вызвать замерщика</button>
         <a href="#types"><button id="get_types">Выбрать жалюзи</button></a>
       </div>
     </div>
@@ -96,8 +96,8 @@
             <img src="img/1.jpg" alt="горизонтальные жалюзи" class="img-responsive center-block">
             <h4>Горизонтальные жалюзи</h4>
             <br>
-            <button class="more" data-toggle="modal" href="#">Подробнее</button>
-            <button class="offer" data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#more_horizontal">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#get_horizontal">Заказать</button>
           </div>
         </div>
         <div class="col-md-3">
@@ -105,8 +105,8 @@
             <img src="img/1.jpg" alt="Вертикальные жалюзи" class="img-responsive center-block">
             <h4>Вертикальные жалюзи</h4>
             <br>
-            <button class="more" data-toggle="modal" href="#">Подробнее</button>
-            <button class="offer" data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#more_vertical">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#get_horizontal">Заказать</button>
           </div>
         </div>
         <div class="col-md-3">
@@ -114,8 +114,8 @@
             <img src="img/1.jpg" alt="Рулонные жалюзи" class="img-responsive center-block">
             <h4>Рулонные жалюзи</h4>
             <br>
-            <button class="more" data-toggle="modal" href="#">Подробнее</button>
-            <button class="offer" data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#more_roll">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#get_horizontal">Заказать</button>
           </div>
         </div>
         <div class="col-md-3">
@@ -123,8 +123,8 @@
             <img src="img/1.jpg" alt="Жалюзи плиссе" class="img-responsive center-block">
             <h4>Жалюзи плиссе</h4>
             <br>
-            <button class="more" data-toggle="modal" href="#">Подробнее</button>
-            <button class="offer" data-toggle="modal" href="#">Заказать</button>
+            <button class="more" data-toggle="modal" href="#more_plisse">Подробнее</button>
+            <button class="offer" data-toggle="modal" href="#get_horizontal">Заказать</button>
           </div>
         </div>
       </div>
@@ -140,10 +140,10 @@
           <p>Оставьте заявку на консультацию и наш специалист подробно ответит <br>
               на все Ваши в опросы. Это бесплатно</p>
           <br>
-          <button data-toggle="modal" href="#">Бесплатная консультация</button>
+          <button id="free_consult" data-toggle="modal" href="#get_free_consult" jpg>Бесплатная консультация</button>
         </div>
         <div class="col-md-2">
-          <img src="img/help-img.jpeg" alt="Бесплатная консультация" class="img-responsive center-block">
+          <img src="img/help-img.jpg" alt="Бесплатная консультация" class="img-responsive center-block help_img">
         </div>
       </div>
     </div>
@@ -157,18 +157,22 @@
         </div>
       </div>
       <div class="row">
-        <div class="slider">
-          <div class="fotorama">
-            <img src="img/portfolio/1.jpeg" alt="">
-            <img src="img/portfolio/2.jpeg" alt="">
-            <img src="img/portfolio/3.jpeg" alt="">
-            <img src="img/portfolio/4.jpeg" alt="">
-            <img src="img/portfolio/5.jpeg" alt="">
-            <img src="img/portfolio/6.jpeg" alt="">
-            <img src="img/portfolio/7.jpeg" alt="">
-            <img src="img/portfolio/8.jpeg" alt="">
-            <img src="img/portfolio/9.jpeg" alt="">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="slider">
+          <div class="fotorama" data-nav="thumbs"
+          data-ratio="800/600"
+          data-fit="cover">
+            <img src="img/portfolio/1.jpg" alt="">
+            <img src="img/portfolio/2.jpg" alt="">
+            <img src="img/portfolio/3.jpg" alt="">
+            <img src="img/portfolio/4.jpg" alt="">
+            <img src="img/portfolio/5.jpg" alt="">
+            <img src="img/portfolio/6.jpg" alt="">
+            <img src="img/portfolio/7.jpg" alt="">
+            <img src="img/portfolio/8.jpg" alt="">
+            <img src="img/portfolio/9.jpg" alt="">
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -185,13 +189,14 @@
           <br>
           <h3>Закажите установку жалюзи до 29.06.2016</h3>
           <p>и получите в подарок москитную сетку для окна</p>
-          <form action="#">
+          <form action="send.php" method="post">
+          <input type="hidden" name="what" value="Участвовать в акции">
             <div class="row">
               <div class="col-md-4">
-                <input type="text" required placeholder="Имя..." class="form-control form-input">
+                <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
               </div>
               <div class="col-md-4">
-                <input type="text" required placeholder="Телефон..." class="form-control form-input">
+                <input name="phone" id="phone_1" type="text" required placeholder="Телефон..." class="form-control form-input">
               </div>
               <div class="col-md-4">
                 <button type="submit">Заказать жалюзи</button>
@@ -241,7 +246,7 @@
                        <img src="img/avatar-1.jpg" alt="" class="img-circle center-block">
                      </div>
                      <div class="col-md-10">
-                       <h5>Марина Забелина</h5>
+                       <h5>Марина Забелина1</h5>
                        <a href="#">vk.com/id999999</a>
                      </div>
                    </div>
@@ -324,15 +329,6 @@
                  </div>
                </div>
             </div>
-            <!-- Навигация для карусели -->
-            <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
           </div>
         </div>
       </div>
@@ -342,9 +338,9 @@
   <footer id="contacts">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5 col-md-offset-1">
           <div class="map">
-            
+            <iframe src="https://www.google.com/maps/d/embed?mid=1uPlmunpmwT4BOU_kTurOqmTt9rI" width="440" height="280"></iframe>
           </div>
         </div>
         <div class="col-md-6">
@@ -352,6 +348,7 @@
           <div class="row">
             <address>
               <p id="address">Адрес:</p>
+              <i class="fa fa-map-marker foot_icon" aria-hidden="true"></i>
               <p id="kazan">г. Казань, ул. Серова 125</p>
             </address>
           </div>
@@ -360,6 +357,7 @@
             <p id="phone_footer">
               Телефон:
             </p>
+            <i class="fa fa-phone foot_icon" aria-hidden="true"></i>
             <p id="number">
               +380 99 999999
             </p>
@@ -367,16 +365,16 @@
           </div>
           <div class="row">
             <a href="">
-              <img src="img/social-1.png" alt="">
+              <i class="fa fa-vk" aria-hidden="true"></i>
             </a>
             <a href="">
-              <img src="img/social-2.png" alt="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
-            <button data-toggle="modal" href="#">Задать вопрос</button>
+            <button id="get_answer" data-toggle="modal" href="#get_free_consult">Задать вопрос</button>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row details_row">
         <div class="col-md-4 details">
           <h5>ООО "Рога и копыта"</h5>
           <p>УРК 432423</p>
@@ -411,27 +409,309 @@
 
 
 
-    <!-- Modal -->
-        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+<!-- Вызвать замерщика -->
+        <div class="modal fade" id="get_measurer_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 
               </div>
-              <div class="modal-body">
+              <div class="modal-body text-center">
                <div class="row">
-                 
+                 <div class="header_modal">
+                   <h4>Для вызова замерщика <br>оставьте свои данные</h4>
+                 </div>
+               </div>
+               <div class="row">
+                 <form action="send.php" method="post">
+                 <input type="hidden" name="what" value="вызвать замерщика">
+                   <div class="col-xs-12">
+                      <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-12">
+                      <input name="phone" id="phone_2" type="text" required placeholder="Телефон..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-12">
+                     <button type="submit">Вызвать замерщика</button>
+                   </div>
+                 </form>
                </div>
               </div>
             </div>
           </div>
         </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
+<!-- Подробнее (горизонтальные жалюзи) -->
+<div class="modal fade" id="more_horizontal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+              <div class="modal-body">
+               <div class="row">
+                 <div class="header_modal_info">
+                   <h4>Горизонтальные жалюзи</h4>
+                 </div>
+                 <br>
+               </div>
+               <div class="row">
+                 <div class="col-sm-5">
+                   <div class="fotorama">
+                     <img src="img/types/horizontal/1.jpg" alt="">
+                     <img src="img/types/horizontal/2.jpg" alt="">
+                     <img src="img/types/horizontal/3.jpg" alt="">
+                     <img src="img/types/horizontal/4.jpg" alt="">
+                   </div>
+                 </div>
+                 <div class="col-sm-7">
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad saepe autem quasi officiis omnis, eius perferendis officia veritatis nulla, reiciendis doloremque magnam fugiat explicabo necessitatibus illo vel, ex sed alias.
+                   </p>
+                   <br>
+                   <p><span class="price">от 999 рублей</span></p>
+                 </div>
+               </div>
+               <div class="row">
+                 <form action="send.php" method="post">
+                 <input type="hidden" name="what" value="горизонтальные жалюзи">
+                   <div class="col-xs-4">
+                      <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                      <input name="phone" id="phone_3" type="text" required placeholder="Телефон..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                     <button type="submit">Заказать жалюзи</button>
+                   </div>
+                 </form>
+               </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+<!-- Подробнее (вертикальные жалюзи) -->
+<div class="modal fade" id="more_vertical" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+              <div class="modal-body">
+               <div class="row">
+                 <div class="header_modal_info">
+                   <h4>Вертикальные жалюзи</h4>
+                 </div>
+                 <br>
+               </div>
+               <div class="row">
+                 <div class="col-sm-5">
+                   <div class="fotorama">
+                     <img src="img/types/vertical/1.jpg" alt="">
+                     <img src="img/types/vertical/2.jpg" alt="">
+                     <img src="img/types/vertical/3.jpg" alt="">
+                     <img src="img/types/vertical/4.jpg" alt="">
+                   </div>
+                 </div>
+                 <div class="col-sm-7">
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad saepe autem quasi officiis omnis, eius perferendis officia veritatis nulla, reiciendis doloremque magnam fugiat explicabo necessitatibus illo vel, ex sed alias.
+                   </p>
+                   <br>
+                   <p><span class="price">от 999 рублей</span></p>
+                 </div>
+               </div>
+               <div class="row">
+                 <form action="#">
+                   <div class="col-xs-4">
+                      <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                     <button type="submit">Заказать жалюзи</button>
+                   </div>
+                 </form>
+               </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+<!-- Подробнее (рулонные жалюзи) -->
+<div class="modal fade" id="more_roll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+              <div class="modal-body">
+               <div class="row">
+                 <div class="header_modal_info">
+                   <h4>Рулонные жалюзи</h4>
+                 </div>
+                 <br>
+               </div>
+               <div class="row">
+                 <div class="col-sm-5">
+                   <div class="fotorama">
+                     <img src="img/types/roll/1.jpg" alt="">
+                     <img src="img/types/roll/2.jpg" alt="">
+                     <img src="img/types/roll/3.jpg" alt="">
+                     <img src="img/types/roll/4.jpg" alt="">
+                   </div>
+                 </div>
+                 <div class="col-sm-7">
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad saepe autem quasi officiis omnis, eius perferendis officia veritatis nulla, reiciendis doloremque magnam fugiat explicabo necessitatibus illo vel, ex sed alias.
+                   </p>
+                   <br>
+                   <p><span class="price">от 999 рублей</span></p>
+                 </div>
+               </div>
+               <div class="row">
+                 <form action="#">
+                   <div class="col-xs-4">
+                      <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                     <button type="submit">Заказать жалюзи</button>
+                   </div>
+                 </form>
+               </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+<!-- Подробнее (плиссе жалюзи) -->
+<div class="modal fade" id="more_plisse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+              <div class="modal-body">
+               <div class="row">
+                 <div class="header_modal_info">
+                   <h4>Жалюзи плиссе</h4>
+                 </div>
+                 <br>
+               </div>
+               <div class="row">
+                 <div class="col-sm-5">
+                   <div class="fotorama">
+                     <img src="img/types/plisse/1.jpg" alt="">
+                     <img src="img/types/plisse/2.jpg" alt="">
+                     <img src="img/types/plisse/3.jpg" alt="">
+                     <img src="img/types/plisse/4.jpg" alt="">
+                   </div>
+                 </div>
+                 <div class="col-sm-7">
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad saepe autem quasi officiis omnis, eius perferendis officia veritatis nulla, reiciendis doloremque magnam fugiat explicabo necessitatibus illo vel, ex sed alias.
+                   </p>
+                   <br>
+                   <p><span class="price">от 999 рублей</span></p>
+                 </div>
+               </div>
+               <div class="row">
+                 <form action="#">
+                   <div class="col-xs-4">
+                      <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-4">
+                     <button type="submit">Заказать жалюзи</button>
+                   </div>
+                 </form>
+               </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+<!-- заказать горизонтальные -->
+        <div class="modal fade" id="get_horizontal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                
+              </div>
+              <div class="modal-body text-center">
+               <div class="row">
+                 <div class="header_modal">
+                   <h4>Для заказа жалюзи <br>оставьте свои данные</h4>
+                 </div>
+               </div>
+               <div class="row">
+                 <form action="#">
+                   <div class="col-xs-12">
+                      <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-12">
+                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-12">
+                     <button type="submit">Заказать жалюзи</button>
+                   </div>
+                 </form>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Задать вопрос -->
+
+  <div class="modal fade" id="get_free_consult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                
+              </div>
+              <div class="modal-body text-center">
+               <div class="row">
+                 <div class="header_modal">
+                   <h4>Задайте вопрос, и наш менеджер с радостью ответит на него</h4>
+                 </div>
+               </div>
+               <div class="row">
+                 <form action="#">
+                   <div class="col-xs-12">
+                      <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-12">
+                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                   </div>
+                   <div class="col-xs-12">
+                     <textarea name="question" placeholder="Ваш вопрос" id="" cols="25" rows="5"></textarea>
+                   </div>
+                   <div class="col-xs-12">
+                     <button type="submit">Задать вопрос</button>
+                   </div>
+                 </form>
+               </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
