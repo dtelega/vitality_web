@@ -12,7 +12,7 @@ $message="
 Пользователь хочет:".htmlspecialchars($what)."<br />
 Имя: ".htmlspecialchars($name)."<br />
 Телефон: ".htmlspecialchars($phone);
-$headers="From mysite.com";
+$headers="From mysite.com <site-email@mysite.ru>\r\nContent-type: text/html; charset=utf-8 \r\n";
 mail ($to, $subject, $message, $headers);
 header('Location: thanks.html');
 exit();

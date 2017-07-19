@@ -41,26 +41,26 @@
     </div>
   </header>
 
-  <nav>
+  <nav id="top_nav" class="hidden-xs">
     <div class="container">
       <div class="row">
         <ul class="list-inline">
-          <a href="#">
+          <a href="#main">
             <li>Главная</li>
           </a>
-          <a href="#">
+          <a href="#types">
             <li>Виды жалюзи</li>
           </a>
-          <a href="#">
+          <a href="#portfolio">
             <li>Наши работы</li>
           </a>
-          <a href="#">
+          <a href="#offer">
             <li>Акция</li>
           </a>
-          <a href="#">
+          <a href="#feedback">
             <li>Отзывы</li>
           </a>
-          <a href="#">
+          <a href="#contacts">
             <li>Контакты</li>
           </a>
         </ul>
@@ -68,17 +68,39 @@
     </div>
   </nav>
 
+  <nav class="visible-xs">
+    <div class="container">
+      <div class="col-xs-2">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-bars"></i><span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#main">Главная</a></li>
+      <li><a href="#types">Виды жалюзи</a></li>
+      <li><a href="#portfolio">Наши работы</a></li>
+      <li><a href="#offer">Акция</a></li>
+      <li><a href="#feedback">Отзывы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+      </div>
+      <div class="col-xs-10">
+        <img src="img/logo.png" alt="logo" class="img-responsive pull-right">
+      </div>
+    </div>
+  </nav>
+
   <section id="main">
     <div class="container">
-      <div class="row main_header">
+      <div class="row wow fadeInUp main_header">
         <h1><span>Установим жалюзи в вашей квартире </span><br><span>за 2 часа с полной гарантией </span><br><span>и бесплатной доставкой</span></h1>
       </div>
-      <div class="row">
+      <div class="row wow fadeInLeft" data-wow-delay="0.5s">
         <h3><span>Закажите выезд замерщика на дом. <span style="color:#ff9933">Это бесплатно!</span></span></h3>
       </div>
       <div class="row main_buttons">
-        <button data-toggle=modal href="#get_measurer_modal" id="get_measurer">Вызвать замерщика</button>
-        <a href="#types"><button id="get_types">Выбрать жалюзи</button></a>
+        <button class="wow fadeInLeft" data-wow-delay="1s" data-toggle=modal href="#get_measurer_modal" id="get_measurer">Вызвать замерщика</button>
+        <a href="#types">
+        <button class="wow fadeInLeft" data-wow-delay="1.3s" id="get_types">Выбрать жалюзи</button></a>
       </div>
     </div>
   </section>
@@ -86,13 +108,13 @@
   <section id="types">
     <div class="container">
       <div class="row">
-        <div class="section_header text-center">
+        <div class="section_header wow fadeInUp text-center">
           <h2>Виды жалюзи</h2>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-3">
-          <div class="card">
+          <div class="card wow bounceInUp" data-wow-delay="0.3s">
             <img src="img/1.jpg" alt="горизонтальные жалюзи" class="img-responsive center-block">
             <h4>Горизонтальные жалюзи</h4>
             <br>
@@ -101,7 +123,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card">
+          <div class="card wow bounceInUp" data-wow-delay="0.4s">
             <img src="img/1.jpg" alt="Вертикальные жалюзи" class="img-responsive center-block">
             <h4>Вертикальные жалюзи</h4>
             <br>
@@ -110,7 +132,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card">
+          <div class="card wow bounceInUp" data-wow-delay="0.5s">
             <img src="img/1.jpg" alt="Рулонные жалюзи" class="img-responsive center-block">
             <h4>Рулонные жалюзи</h4>
             <br>
@@ -119,7 +141,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card">
+          <div class="card wow bounceInUp" data-wow-delay="0.6s">
             <img src="img/1.jpg" alt="Жалюзи плиссе" class="img-responsive center-block">
             <h4>Жалюзи плиссе</h4>
             <br>
@@ -140,10 +162,10 @@
           <p>Оставьте заявку на консультацию и наш специалист подробно ответит <br>
               на все Ваши в опросы. Это бесплатно</p>
           <br>
-          <button id="free_consult" data-toggle="modal" href="#get_free_consult" jpg>Бесплатная консультация</button>
+          <button class="wow zoomInUp" data-wow-delay="0.5s" id="free_consult" data-toggle="modal" href="#get_free_consult" jpg>Бесплатная консультация</button>
         </div>
         <div class="col-md-2">
-          <img src="img/help-img.jpg" alt="Бесплатная консультация" class="img-responsive center-block help_img">
+          <img src="img/help-img.jpg" alt="Бесплатная консультация" class="img-responsive center-block help_img wow zoomInLeft" data-wow-delay="0.5s">
         </div>
       </div>
     </div>
@@ -152,7 +174,7 @@
   <section id="portfolio">
     <div class="container">
       <div class="row">
-        <div class="section_header text-center">
+        <div class="section_header wow fadeInUp text-center">
           <h2>Наши работы</h2>
         </div>
       </div>
@@ -182,7 +204,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <img src="img/gift.jpg" alt="Подарок" class="img-responsive center-block gift">
+          <img src="img/gift.jpg" alt="Подарок" class="img-responsive center-block gift wow swing" data-wow-delay="1.2s">
         </div>
         <div class="col-md-9">
           <h4>Акция</h4>
@@ -211,7 +233,7 @@
   <section id="feedback">
     <div class="container">
       <div class="row">
-        <div class="section_header text-center">
+        <div class="section_header wow fadeInUp text-center">
           <h2>Отзывы о нашей работе</h2>
         </div>
       </div>
@@ -525,12 +547,13 @@
                  </div>
                </div>
                <div class="row">
-                 <form action="#">
+                 <form action="send.php" method="post">
+                 <input type="hidden" name="what" value="Вертикальные жалюзи">
                    <div class="col-xs-4">
                       <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
                    </div>
                    <div class="col-xs-4">
-                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                      <input name="phone" id="phone_4" type="text" required placeholder="Телефон..." class="form-control form-input">
                    </div>
                    <div class="col-xs-4">
                      <button type="submit">Заказать жалюзи</button>
@@ -574,12 +597,14 @@
                  </div>
                </div>
                <div class="row">
-                 <form action="#">
+                 <form action="send.php" method="post">
+                  <input type="hidden" name="what" value="Рулонные жалюзи">
+                 <input type="hidden" name="what" value=>
                    <div class="col-xs-4">
                       <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
                    </div>
                    <div class="col-xs-4">
-                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                      <input name="phone" id="phone_5" type="text" required placeholder="Телефон..." class="form-control form-input">
                    </div>
                    <div class="col-xs-4">
                      <button type="submit">Заказать жалюзи</button>
@@ -623,12 +648,13 @@
                  </div>
                </div>
                <div class="row">
-                 <form action="#">
+                 <form action="send.php" method="post">
+                 <input type="hidden" name="what" value="Жалюзи плиссе">
                    <div class="col-xs-4">
                       <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
                    </div>
                    <div class="col-xs-4">
-                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                      <input name="phone" id="phone_6" type="text" required placeholder="Телефон..." class="form-control form-input">
                    </div>
                    <div class="col-xs-4">
                      <button type="submit">Заказать жалюзи</button>
@@ -655,12 +681,13 @@
                  </div>
                </div>
                <div class="row">
-                 <form action="#">
+                 <form action="send.php" method="post">
+                 <input type="hidden" name="what" value="Заказать жалюзи">
                    <div class="col-xs-12">
                       <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
                    </div>
                    <div class="col-xs-12">
-                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                      <input name="phone" id="phone_7" type="text" required placeholder="Телефон..." class="form-control form-input">
                    </div>
                    <div class="col-xs-12">
                      <button type="submit">Заказать жалюзи</button>
@@ -688,12 +715,13 @@
                  </div>
                </div>
                <div class="row">
-                 <form action="#">
+                 <form action="send.php" method="post">
+                 <input type="hidden" name="what" value="Задать вопрос">
                    <div class="col-xs-12">
                       <input name="name" type="text" required placeholder="Имя..." class="form-control form-input">
                    </div>
                    <div class="col-xs-12">
-                      <input name="phone" type="text" required placeholder="Телефон..." class="form-control form-input">
+                      <input name="phone" id="phone_8" type="text" required placeholder="Телефон..." class="form-control form-input">
                    </div>
                    <div class="col-xs-12">
                      <textarea name="question" placeholder="Ваш вопрос" id="" cols="25" rows="5"></textarea>
@@ -724,7 +752,63 @@
           }
       );
     </script>
+    
+  <script>
+    var h_hght = 110; // высота шапки
+    var h_mrg = 0;    // отступ когда шапка уже не видна
+                     
+    $(function(){
+     
+        var elem = $('#top_nav');
+        var top = $(this).scrollTop();
+         
+        if(top > h_hght){
+            elem.css('top', h_mrg);
+        }           
+         
+        $(window).scroll(function(){
+            top = $(this).scrollTop();
+             
+            if (top+h_mrg < h_hght) {
+                elem.css('top', (h_hght-top));
+            } else {
+                elem.css('top', h_mrg);
+            }
+        });
+     
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $("#top_nav").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+ 
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
 
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+    
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 500);
+    });
+     $(".main_buttons").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+ 
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+    
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 500);
+    });
+});
+  </script>
+  <link rel="stylesheet" href="css/animate.css">
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
   </body>

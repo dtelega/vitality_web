@@ -31,6 +31,7 @@ header {
   padding-bottom: 20px;
   padding-top: 25px;
   color: #666666;
+  height: 110px;
 }
 header .descript h4 {
   font-family: 'Lato';
@@ -67,6 +68,11 @@ header .phone_number p {
 /*============    NAV    ===========*/
 nav {
   background-color: #fafdfa;
+  top: 110px;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 60px;
 }
 nav ul.list-inline a {
   font-family: 'Open+Sans';
@@ -137,7 +143,7 @@ section#main .main_buttons button#get_types {
   border: none;
   background-color: transparent;
   padding: 15px 33px;
-  color: #ff9933;
+  color: #fff;
   font-family: 'Roboto';
   text-transform: uppercase;
   font-size: 20px;
@@ -148,6 +154,7 @@ section#main .main_buttons button#get_types {
   -webkit-transition: all 0.2s 0.02s ease;
 }
 section#main .main_buttons button#get_types:hover {
+  color: #ff9933;
   background-color: rgba(255, 255, 255, 0.5);
 }
 /*============    Виды жалюзи   ===========*/
@@ -547,7 +554,9 @@ button[type="submit"]:hover {
   color: #ff9933;
   font-size: 22px;
 }
-/*============    ШРИФТЫ    ===========*/
-/*============    ПОДВАЛ    ===========*/
-/*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
 /*============    	АДАПТИВ    ===========*/
+.visible-xs .dropdown-toggle {
+  border: 1px solid #000;
+  padding: 5px;
+  margin-top: 10px;
+}
